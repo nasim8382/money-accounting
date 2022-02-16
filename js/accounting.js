@@ -5,7 +5,8 @@ function getInputValue (amount) {
     return convertInputIntoFloat;
 }
 
-document.getElementById('calculate-button').addEventListener('click', function () {
+// total amount function
+function getTotalAmount () {
     const incomeInput = getInputValue('income');
     const foodInput = getInputValue('food');
     const rentInput = getInputValue('rent');
@@ -20,4 +21,26 @@ document.getElementById('calculate-button').addEventListener('click', function (
     const getTotal = document.getElementById('total');
     const totalAmount = incomeInput - totalExpensesAmount;
     getTotal.innerText = totalAmount;
+    return totalAmount;
+}
+
+// calculate button event handler
+document.getElementById('calculate-button').addEventListener('click', function () {
+    getTotalAmount ();
+})
+
+// save button event handler
+document.getElementById('save-button').addEventListener('click', function () {
+    const saveInput = getInputValue('save');
+    const incomeInput = getInputValue('income');
+
+    // saving amount
+    const getSavingAmount = document.getElementById('saving-amount');
+    const savingAmount = incomeInput /100 * saveInput;
+    getSavingAmount.innerText = savingAmount;
+
+    // remaining balance
+    const getRemainingBalance = document.getElementById('remaining-balance');
+    const remainingBalance = getTotalAmount() - savingAmount;
+    getRemainingBalance.innerText = remainingBalance;
 })
