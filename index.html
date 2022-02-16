@@ -26,10 +26,48 @@
     </header>
 
     <!-- main section -->
-    <main>
-
+    <main class="container mx-auto my-12">
+        <div class="grid grid-cols-full sm:grid-cols-2 gap-8">
+            <!-- image part -->
+        <div>
+            <img src="images/image.jpg" alt="">
+        </div>
+        <!-- calculation part -->
+        <div class="mx-auto my-auto bg-gray-100 p-14">
+            <h3 class="text-2xl font-semibold py-3 text-center">Income</h3>
+            <div class="flex">
+                <h4 class="text-xl">Income:</h4>
+                <input id="income-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="10000">
+            </div>
+            <h3 class="text-2xl font-semibold py-3 text-center">Expenses</h3>
+            <div class="flex">
+                <h4 class="text-xl">Food:</h4>
+                <input id="food-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="10000">
+            </div>
+            <div class="flex py-4">
+                <h4 class="text-xl">Rent:</h4>
+                <input id="rent-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="10000">
+            </div>
+            <div class="flex pb-5">
+                <h4 class="text-xl">Clothes:</h4>
+                <input id="clothes-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="10000">
+            </div>
+            <button id="calculate-button" class="bg-sky-400 py-1.5 px-9 rounded-md text-white font-semibold ml-20">Calculate</button>
+            <h3 class="text-2xl font-semibold py-3 text-center">Total Expenses: <span class="text-emerald-700">5500</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Total: <span class="text-emerald-700">4500</span></h3>
+            <div class="flex">
+                <h4 class="text-xl">Save:</h4>
+                <input id="save-input" class="bg-gray-300 pl-2 sm:pl-12 py-0.5 w-1/4 ml-4 rounded" type="text" value="20">
+                <p class="mx-4">%</p>
+                <button id="save-button" class="bg-sky-400 py-1 px-10 rounded-md text-white font-semibold">Save</button>
+            </div>
+            <h3 class="text-2xl font-semibold py-3 text-center">Saving Amount: <span id="saving-amount" class="text-emerald-700">2000</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Remaining Balance: <span id="remaining-balance" class="text-emerald-700">2500</span></h3>
+        </div>
+        </div>
     </main>
 
+    <!-- script link -->
     <script src="js/accounting.js"></script>
 </body>
 
