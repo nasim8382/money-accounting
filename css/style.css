@@ -5,3 +5,7 @@
 body {
     font-family: 'Exo 2', sans-serif;
 }
+
+#negative-error-text, #total-balance-error-text, #saving-error-text {
+    display: none;
+}
