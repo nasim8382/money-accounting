@@ -5,16 +5,16 @@ function getInputValue (amount) {
     if (getInput < 0) {
         document.getElementById('negative-error-text').style.display = 'block';
     }
-    // else if (convertInputIntoFloat != 'number') {
-    //     alert('Please...... input number!!');
-    // }
+    if(isNaN(convertInputIntoFloat)) {
+        alert('Please input number!!!');
+    }
     else{
         return convertInputIntoFloat;
     }
 }
 
 // cross-mark click handler
-document.getElementById('cross-mark').addEventListener('click', function () {
+document.getElementById('cross-mark-negative').addEventListener('click', function () {
     document.getElementById('negative-error-text').style.display = 'none';
 })
 
