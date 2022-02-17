@@ -65,19 +65,7 @@ function invalidCalculation () {
     const foodInput = getInputValue('food');
     const rentInput = getInputValue('rent');
     const clothesInput = getInputValue('clothes');
-    if (incomeInput < 0 || isNaN(incomeInput)) {
-        fixIsNan ();
-        document.getElementById('total-balance-error-text').style.display = 'none';
-    }
-    if (foodInput < 0 || isNaN(foodInput)) {
-        fixIsNan ();
-        document.getElementById('total-balance-error-text').style.display = 'none';
-    }
-    if (rentInput < 0 || isNaN(rentInput)) {
-        fixIsNan ();
-        document.getElementById('total-balance-error-text').style.display = 'none';
-    }
-    if (clothesInput < 0 || isNaN(clothesInput)) {
+    if (incomeInput < 0 || isNaN(incomeInput) || foodInput < 0 || isNaN(foodInput) || rentInput < 0 || isNaN(rentInput) || clothesInput < 0 || isNaN(clothesInput)){
         fixIsNan ();
         document.getElementById('total-balance-error-text').style.display = 'none';
     }
