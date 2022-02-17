@@ -84,12 +84,13 @@ document.getElementById('save-button').addEventListener('click', function () {
     const savingAmountDigit = savingAmount.toFixed(2);
     getSavingAmount.innerText = savingAmountDigit;
 
-    if ( saveInput >= 0) {
+    if ( saveInput >= 0 || isNaN(saveInput) == false) {
         // remaining balance
         const remainingBalance = getTotalAmount() - savingAmount;
         const  remainingBalanceDigit = remainingBalance.toFixed(2);
         getRemainingBalance.innerText = remainingBalanceDigit;
         document.getElementById('saving-error-text').style.display = 'none';
+        document.getElementById('saving-input-error-text').style.display = 'none';
     }
 
     if ( savingAmount > totalBalance ) {
@@ -100,5 +101,6 @@ document.getElementById('save-button').addEventListener('click', function () {
     if (saveInput < 0 || isNaN(saveInput)) {
         getSavingAmount.innerText = '00';
         getRemainingBalance.innerText = '00';
+        document.getElementById('saving-input-error-text').style.display = 'block';
     }
 })
