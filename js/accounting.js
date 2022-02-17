@@ -2,11 +2,10 @@
 function getInputValue (amount) {
     const getInput = document.getElementById(amount + '-input').value;
     const convertInputIntoFloat = parseFloat(getInput);
-    console.log(convertInputIntoFloat);
     if (getInput < 0) {
         document.getElementById('negative-error-text').style.display = 'block';
     }
-    if(isNaN(convertInputIntoFloat)) {
+    if(isNaN(getInput)) {
         document.getElementById('string-error-text').style.display = 'block';
     }
     else{
@@ -34,7 +33,8 @@ function getTotalAmount () {
     // total expenses amount
     const getTotalExpenses = document.getElementById('total-expenses');
     const totalExpensesAmount =  foodInput + rentInput + clothesInput;
-    getTotalExpenses.innerText = totalExpensesAmount;
+    const  totalExpensesDigit = totalExpensesAmount.toFixed(2);
+    getTotalExpenses.innerText = totalExpensesDigit;
 
     if (totalExpensesAmount > incomeInput) {
         document.getElementById('total-balance-error-text').style.display = 'block';
@@ -44,13 +44,14 @@ function getTotalAmount () {
     else{
         // total amount
         const totalAmount = incomeInput - totalExpensesAmount;
-        getTotal.innerText = totalAmount;
+        const  totalAmountDigit = totalAmount.toFixed(2);
+        getTotal.innerText = totalAmountDigit;
         document.getElementById('total-balance-error-text').style.display = 'none';
         return totalAmount;
     }
 }
 
-// function invalid text
+// function fix isNan value
 function fixIsNan () {
     const getTotalExpenses = document.getElementById('total-expenses');
     getTotalExpenses.innerText = '00';
@@ -99,7 +100,8 @@ document.getElementById('save-button').addEventListener('click', function () {
     // saving amount
     const getSavingAmount = document.getElementById('saving-amount');
     const savingAmount = incomeInput /100 * saveInput;
-    getSavingAmount.innerText = savingAmount;
+    const savingAmountDigit = savingAmount.toFixed(2);
+    getSavingAmount.innerText = savingAmountDigit;
 
     if ( savingAmount > getTotalAmount() ) {
         document.getElementById('saving-error-text').style.display = 'block';
@@ -112,7 +114,8 @@ document.getElementById('save-button').addEventListener('click', function () {
     else {
         // remaining balance
         const remainingBalance = getTotalAmount() - savingAmount;
-        getRemainingBalance.innerText = remainingBalance;
+        const  remainingBalanceDigit = remainingBalance.toFixed(2);
+        getRemainingBalance.innerText = remainingBalanceDigit;
         document.getElementById('saving-error-text').style.display = 'none';
     }
 })
