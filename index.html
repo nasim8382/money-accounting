@@ -33,36 +33,37 @@
         <!-- calculation part -->
         <div class="mx-auto my-auto bg-gray-100 p-14">
             <h4 id="negative-error-text" class="text-xl p-1 bg-slate-200 px-4 rounded-md text-rose-400 mb-3"><span id="cross-mark-negative" class="bg-white p-1">❌</span> Money cannot be nagative, so please click the cross-bar and input positive number.</h4>
+            <h4 id="string-error-text" class="text-xl p-1 bg-slate-200 px-4 rounded-md text-rose-400 mb-3"><span id="cross-mark" class="bg-white p-1">❌</span> Money can not be text, so please click the cross-bar and input number.</h4>
             <h3 class="text-2xl font-semibold py-3 text-center">Income</h3>
             <div class="flex">
                 <h4 class="text-xl">Income:</h4>
-                <input id="income-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="10000">
+                <input id="income-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="0">
             </div>
             <h3 class="text-2xl font-semibold py-3 text-center">Expenses</h3>
             <div class="flex">
                 <h4 class="text-xl">Food:</h4>
-                <input id="food-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="3000">
+                <input id="food-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="0">
             </div>
             <div class="flex py-4">
                 <h4 class="text-xl">Rent:</h4>
-                <input id="rent-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="2000">
+                <input id="rent-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="0">
             </div>
             <div class="flex pb-5">
                 <h4 class="text-xl">Clothes:</h4>
-                <input id="clothes-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="500">
+                <input id="clothes-input" class="bg-gray-300 pl-4 py-0.5 w-3/5 ml-4 rounded" type="text" value="0">
             </div>
             <button id="calculate-button" class="bg-sky-400 py-1.5 px-9 rounded-md text-white font-semibold ml-20">Calculate</button>
-            <h3 class="text-2xl font-semibold py-3 text-center">Total Expenses: <span id="total-expenses" class="text-emerald-700">5500</span></h3>
-            <h3 class="text-2xl font-semibold py-3 text-center">Total: <span id="total" class="text-emerald-700">4500</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Total Expenses: <span id="total-expenses" class="text-emerald-700">00</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Total: <span id="total" class="text-emerald-700">00</span></h3>
             <h4 id="total-balance-error-text" class="text-xl p-1 bg-slate-200 px-4 rounded-md text-rose-400 mb-4">❌ Your total income should have greter than your total expenses.</h4>
             <div class="flex">
                 <h4 class="text-xl">Save:</h4>
-                <input id="save-input" class="bg-gray-300 pl-2 sm:pl-12 py-0.5 w-1/4 ml-4 rounded" type="text" value="20">
+                <input id="save-input" class="bg-gray-300 pl-2 sm:pl-12 py-0.5 w-1/4 ml-4 rounded" type="text" value="0">
                 <p class="mx-4">%</p>
                 <button id="save-button" class="bg-sky-400 py-1 px-10 rounded-md text-white font-semibold">Save</button>
             </div>
-            <h3 class="text-2xl font-semibold py-3 text-center">Saving Amount: <span id="saving-amount" class="text-emerald-700">2000</span></h3>
-            <h3 class="text-2xl font-semibold py-3 text-center">Remaining Balance: <span id="remaining-balance" class="text-emerald-700">2500</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Saving Amount: <span id="saving-amount" class="text-emerald-700">00</span></h3>
+            <h3 class="text-2xl font-semibold py-3 text-center">Remaining Balance: <span id="remaining-balance" class="text-emerald-700">00</span></h3>
             <h4 id="saving-error-text" class="text-xl p-1 bg-slate-200 px-4 rounded-md text-rose-400">❌ Your saving amount can not be more than your total balance.</h4>
         </div>
         </div>
